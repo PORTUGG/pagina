@@ -2,7 +2,7 @@
 body {
     margin: 0;
     font-family: Arial, sans-serif;
-     /* Evita el scroll durante la pantalla de bienvenida */
+    overflow: auto; /* Permite el scroll en el contenido principal */
 }
 
 /* Estilos de la pantalla de bienvenida */
@@ -22,12 +22,14 @@ body {
     transition: opacity 0.5s ease, visibility 0.5s ease;
 }
 
+/* Contenido de la pantalla de bienvenida */
 .splash-content {
     text-align: center;
     max-width: 90%;
     margin: 0 auto;
 }
 
+/* Estilo del botón */
 #continue-btn {
     margin-top: 20px;
     padding: 10px 20px;
@@ -71,11 +73,11 @@ body {
     overflow: hidden; /* Asegura que las partículas que se dibujan fuera del contenedor no se muestren */
 }
 
-/* Estilos para las partículas */
+/* Estilos para las partículas (flores) */
 .particle {
     position: absolute;
-    width: 10px;
-    height: 10px;
+    width: 20px; /* Tamaño de las partículas */
+    height: 20px;
     background-color: #ffcc00;
     border-radius: 50%;
     pointer-events: none; /* No interactúa con el puntero */
@@ -89,5 +91,34 @@ body {
     }
     100% {
         transform: translateY(-100vh) scale(0.5);
+    }
+}
+
+/* Estilos responsivos */
+@media (max-width: 600px) {
+    #continue-btn {
+        font-size: 14px; /* Tamaño del texto en el botón más pequeño en pantallas pequeñas */
+        padding: 8px 16px; /* Tamaño del botón más pequeño */
+    }
+    .splash-content {
+        font-size: 14px; /* Tamaño del texto en la pantalla de bienvenida más pequeño */
+    }
+    .particle {
+        width: 15px; /* Tamaño de las partículas más pequeño en pantallas pequeñas */
+        height: 15px;
+    }
+}
+
+@media (max-width: 400px) {
+    #continue-btn {
+        font-size: 12px; /* Tamaño del texto en el botón aún más pequeño en pantallas muy pequeñas */
+        padding: 6px 12px; /* Tamaño del botón aún más pequeño */
+    }
+    .splash-content {
+        font-size: 12px; /* Tamaño del texto en la pantalla de bienvenida aún más pequeño */
+    }
+    .particle {
+        width: 10px; /* Tamaño de las partículas aún más pequeño en pantallas muy pequeñas */
+        height: 10px;
     }
 }
