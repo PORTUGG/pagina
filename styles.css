@@ -2,7 +2,7 @@
 body {
     margin: 0;
     font-family: Arial, sans-serif;
-    overflow: hidden; /* Evita el scroll durante la pantalla de bienvenida */
+     /* Evita el scroll durante la pantalla de bienvenida */
 }
 
 /* Estilos de la pantalla de bienvenida */
