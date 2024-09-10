@@ -20,13 +20,22 @@ body {
     z-index: 1000; /* Asegura que esté encima del contenido principal */
     opacity: 1;
     transition: opacity 0.5s ease, visibility 0.5s ease;
+    text-align: center; /* Alinea el texto al centro */
+    overflow: hidden; /* Asegura que el contenido no se desborde */
 }
 
-/* Contenido de la pantalla de bienvenida */
 .splash-content {
-    text-align: center;
-    max-width: 90%;
-    margin: 0 auto;
+    max-width: 90%; /* Limita el ancho del contenido */
+    padding: 20px; /* Añade algo de relleno */
+    box-sizing: border-box; /* Incluye el relleno y borde en el ancho total */
+}
+
+/* Estilo del texto en la pantalla de bienvenida */
+.splash-content h1, .splash-content p {
+    font-size: 0.7vw; /* Tamaño de fuente relativo al ancho de la ventana */
+    margin: 0;
+    line-height: 1.2; /* Ajusta la altura de línea para mejorar la legibilidad */
+    word-wrap: break-word; /* Rompe las palabras largas */
 }
 
 /* Estilo del botón */
@@ -100,12 +109,8 @@ body {
         font-size: 14px; /* Tamaño del texto en el botón más pequeño en pantallas pequeñas */
         padding: 8px 16px; /* Tamaño del botón más pequeño */
     }
-    .splash-content {
-        font-size: 14px; /* Tamaño del texto en la pantalla de bienvenida más pequeño */
-    }
-    .particle {
-        width: 15px; /* Tamaño de las partículas más pequeño en pantallas pequeñas */
-        height: 15px;
+    .splash-content h1, .splash-content p {
+        font-size: 3.5vw; /* Ajusta el tamaño del texto en pantallas más pequeñas */
     }
 }
 
@@ -114,11 +119,7 @@ body {
         font-size: 12px; /* Tamaño del texto en el botón aún más pequeño en pantallas muy pequeñas */
         padding: 6px 12px; /* Tamaño del botón aún más pequeño */
     }
-    .splash-content {
-        font-size: 12px; /* Tamaño del texto en la pantalla de bienvenida aún más pequeño */
-    }
-    .particle {
-        width: 10px; /* Tamaño de las partículas aún más pequeño en pantallas muy pequeñas */
-        height: 10px;
+    .splash-content h1, .splash-content p {
+        font-size: 3.5vw; /* Ajusta el tamaño del texto en pantallas muy pequeñas */
     }
 }
